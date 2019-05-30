@@ -2,5 +2,22 @@
     font-family: 'Futura PT';
     font-style: normal;
     font-weight: 400;
-    src: url(fonts/Permanent-Marker.woff2) format('woff2');
+    src: url(../assets/fonts/FuturaPT-Book.woff) format('woff'),
+    url(../assets/fonts/FuturaPT-Book.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../assets/fonts/FuturaPT-Bold.woff) format('woff'),
+    url(../assets/fonts/FuturaPT-Bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 200;
+    src: url(../assets/fonts/FuturaPT-Light.woff) format('woff'),
+    url(../assets/fonts/FuturaPT-Light.woff2) format('woff2');
 }

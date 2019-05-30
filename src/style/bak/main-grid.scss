@@ -1,0 +1,184 @@
+// ----------------------------------------------------------------------------
+// Includes
+// ----------------------------------------------------------------------------
+
+// @import 'fonts';
+// @import 'colors';
+
+$mobile-w-min: 20rem; //320px mobile
+$tablet-w-min: 48rem; //768px tablet
+$laptop-w-min: 64rem; //1024px laptop
+$desktop-w-min: 80rem; //1280px desktop
+
+// ----------------------------------------------------------------------------
+// Typography
+// ----------------------------------------------------------------------------
+
+$sans: -apple-system, 'Helvetica Neue', Helvetica, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+
+html {
+    font-family: $sans;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+
+// ----------------------------------------------------------------------------
+// Layout
+// ----------------------------------------------------------------------------
+
+
+// ------------------------------------------------
+// Helper Classes
+// ------------------------------------------------
+
+.visually-hidden {
+    height: 0;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+
+}
+
+.two-col {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: 1fr;            
+    margin: 0 auto;
+    width: 100%;
+
+    li, a {
+        grid-column: 1;
+    }
+
+    @media screen and (min-width: $tablet-w-min){
+        grid-template-columns: repeat(2, 1fr);                           
+        
+        width: 80%;
+
+        li:nth-child(odd), a:nth-child(odd) {
+            grid-column: 1;
+        }
+
+        li:nth-child(even), a:nth-child(even) {
+            grid-column: 2;
+        }
+    }
+}
+
+// ------------------------------------------------
+// Global Elements
+// ------------------------------------------------
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin-bottom: 1rem;
+    }
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+// ------------------------------------------------
+// User Definitions
+// ------------------------------------------------
+
+// ------------------------------------------------
+// Main
+// ------------------------------------------------
+
+
+main {
+    display: grid;
+
+    grid-auto-flow: row;
+    grid-gap: 1rem;
+    grid-template-columns: 33% 1fr 33%;
+
+    margin: 1rem;
+
+    h1 {
+        grid-column: 1 / 4;
+    }
+
+    span.header {
+        margin: auto auto;
+        grid-column: 2;
+    }
+
+    h2 {
+        grid-column: 2 / 4;
+        grid-row: 2;
+    }    
+
+    header {
+
+        @media screen and (min-width: $tablet-w-min){
+            align-items: center;
+            display: flex;
+            grid-column: 1 / 4;
+            justify-content: space-around;
+        }
+        
+    }
+
+    .snare {
+        grid-column: 1;
+
+    }
+
+    .toggles {
+        grid-column: 1;
+        grid-row: 3;
+
+        display: flex;
+    }
+
+    // .toggle.anim {
+    //     grid-column: 1;
+    //     grid-row: 3;
+    // }
+
+    // .toggle.sound {
+    //     grid-column: 1;
+
+    //     grid-row: 4;
+    // }
+
+    .date-time {
+        grid-column: 2 / 4;
+    }
+
+    footer {
+        grid-column: 1 / 4;
+        text-align: center;
+    }
+    
+}
+
+// ----------------------------------------------------------------------------
+// Color
+// ----------------------------------------------------------------------------
+
+
+// ------------------------------------------------
+// User Defined
+// ------------------------------------------------
+

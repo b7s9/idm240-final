@@ -10,11 +10,9 @@
 <body>
 
     <main class="grid">
-        <header>
-            <h1>Sammy Rae</h1>
-            <span>live at</span>
-            <h2>Union Transfer</h2>
-        </header>
+        <h1>Sammy Rae</h1>
+        <span class="header">live at</span>
+        <h2>Union Transfer</h2>
         
         <div class="snare">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
@@ -90,15 +88,25 @@
             </svg>
         </div>
 
-        <div class="toggle anim">
-            <label for="anim-toggle">Animation</label>
-            <button id="anim-toggle">On</button>
+        
+
+        <div class="toggles">
+            <div class="toggle anim">
+                <span>Animation</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <!-- <button id="anim-toggle">On</button> -->
+            </div>
+
+            <!-- <div class="toggle sound">
+                <label for="sound-toggle">Sound</label>
+                <button id="sound-toggle">On</button>
+            </div> -->
         </div>
 
-        <div class="toggle sound">
-            <label for="sound-toggle">Sound</label>
-            <button id="sound-toggle">On</button>
-        </div>
+        
 
         <div class="date-time">
             <h4>Saturday, <strong>June 15th</strong>, 2019</h4>
@@ -145,17 +153,17 @@
             </svg>				
         </div>
 
-        <div class="hr-grp">
-            <hr><hr><hr>
-        </div>
-
-        <div class="links">
-            <a href="https://www.sammyrae.com/" target="_blank">Sammy Rae online</a>
-            <a href="http://utphilly.com/" target="_blank">Union Transfer online</a>
-        </div>
+        <ul class="links">
+            <li>
+                <a href="https://www.sammyrae.com/" target="_blank">Sammy Rae online</a><div class="hover"></div>
+            </li>
+            <li>
+                <a href="http://utphilly.com/" target="_blank">Union Transfer online</a><div class="hover"></div> 
+            </li>
+        </ul>
 
         <footer>
-            <span class="address">1026 Spring Garden St. Philadelphia, PA 19123</span>
+            <span class="address">1026 Spring Garden St. Philadelphia, PA</span>
         </footer>
         
     </main>
@@ -164,6 +172,9 @@
         <div class="yellow-box box"></div>
         <div class="green-box box"></div>
         <div class="violet-box box"></div>
+        <div class="hr-grp">
+            <hr><hr><hr>
+        </div>
         <div class="blue-boxes box-set right">
             <div class="box"></div>
             <div class="box"></div>

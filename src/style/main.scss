@@ -30,10 +30,12 @@ h1, h2, h3, h4 {
 
 h1 {
     font-weight: 700;
+    font-size: 2rem;
 }
 
 h2 {
     font-weight: 700; //or 400?
+    font-size: 1.5rem;
 }
 
 span.header {
@@ -272,7 +274,64 @@ main {
 // ------------------------------------------------
 
 div.bg {
-    
+    position: absolute;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    top: 0;
+    width: 100vw;
+    z-index: -10;
+
+    .yellow-box {
+        height: 10rem;
+        width: 57vw;
+    }
+    .green-box {
+        height: 8rem;
+        width: 69vw; 
+        transform: translate(0,-2rem);
+        margin-left: 31vw;
+
+    }
+    .violet-box {
+        height: 5.5rem;
+        transform: translate(0, -3rem);
+        width: 95vw;
+    }
+
+    .hr-grp {
+        transform: translate(0,-2.8rem);
+
+        hr {
+            border-width: 0.05rem;
+        }
+
+        hr:nth-child(1){
+            transform: translate(30vw);
+        }
+        hr:nth-child(2){
+            transform: translate(25vw);
+        }
+        hr:nth-child(3){
+            transform: translate(20vw);
+        }
+    }
+
+    .blue-boxes.right {   
+        margin-left: 60vw;
+        transform: translate(0,-4.7rem);
+        
+        .box {
+            height: 7rem;
+            width: 40vw;
+        }
+        .box:nth-child(2){
+            transform: translate(2rem, -5rem);
+        }
+        .box:nth-child(3){
+            transform: translate(4rem, -10rem);
+        }
+    }
 }
 
 // ----------------------------------------------------------------------------
@@ -299,6 +358,33 @@ a {
 }
 
 // ------------------------------------------------
-// User Defined
+// Background
 // ------------------------------------------------
 
+body {
+    background-color: $white;
+}
+
+.yellow-box {
+    background: yellow;
+    opacity: 0.5;
+}
+
+.green-box {
+    background: #00ff4b;
+    opacity: 0.2;
+}
+
+.violet-box {
+    background: violet;
+    opacity: 0.3;
+}
+
+.blue-boxes .box {
+    background-color: aqua;
+    opacity: 0.15;
+}
+
+// ----------------------------------------------------------------------------
+// Animations
+// ----------------------------------------------------------------------------

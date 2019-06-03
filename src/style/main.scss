@@ -31,11 +31,20 @@ h1, h2, h3, h4 {
 h1 {
     font-weight: 700;
     font-size: 2rem;
+
+    @media screen and (min-width: $laptop-w-min){
+        font-size: 7rem;
+    }
 }
 
 h2 {
     font-weight: 700; //or 400?
     font-size: 1.5rem;
+
+    @media screen and (min-width: $laptop-w-min){
+        font-size: 5rem;
+        font-weight: 200;
+    }
 }
 
 span.header {
@@ -48,12 +57,14 @@ h4 {
 
 a {
     border-bottom: 1px rgba($color: #fff, $alpha: 0) solid;
+    opacity: 1;
     text-decoration: none;
-    transition: border 200ms ease-in;
+    transition: border 200ms ease-in, opacity 200ms ease-in;
 }
 
 a:hover, a:focus {
     border-bottom: 1px $black solid;
+    opacity: 0.85;
 }
 
 
@@ -137,134 +148,188 @@ main {
 
     h1 {
         display: block;
+        @media screen and (min-width: $laptop-w-min){
+            margin-left: 7rem;
+        }
     }
 
     span.header {
         display: inline-block;
-
         margin-left: 7rem;
-
         margin-top: 1rem;
+
+        @media screen and (min-width: $laptop-w-min){
+            margin-left: 40%;
+        }
     }
 
     h2 {
         display: inline-block;
-
-        margin-top: 1rem;
-
         margin-left: 8rem;
+        margin-top: 1rem;
+        @media screen and (min-width: $laptop-w-min){
+            margin-left: 4rem;
+            margin-top: 0;
+        }
     }
 
-    div.snare {
+    div.snare {        
+        display: inline-block;    
+        margin-top: -4rem;
+        position: relative;
         width: 5rem;
 
-        display: inline-block;
-
-        position: relative;
-
-        margin-top: -4rem;
-        // margin-left: 0.5rem;
+        @media screen and (min-width: $laptop-w-min) {
+            display: block;
+            margin-top: 0;
+            margin-left: 7rem;
+            margin-top: -7rem;
+            width: 12.25rem;
+        }
     }
 
     .toggles {
-        display: flex;
-
+        display: flex;        
         flex-wrap: wrap;
-
-        width: 30%;
-
         justify-content: center;
         position: absolute;
-
+        width: 30%;
+        
         .toggle {
-            // display: inline-block;
-    
             margin: 0.5rem 1rem;
-    
-            text-align: center;    
-            
+            text-align: center;   
+
             .switch {
                 margin-top: 0.5rem;
+            }
+        }
+
+        @media screen and (min-width: $laptop-w-min) {
+            .toggle {
+                margin: 2.5rem 1rem;
+
+                span {
+                    font-size: 1.4rem;
+                }
+
+                .switch {
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: 0.5rem;
+                }
             }
         }
     }
 
     .date-time {
-        width: 70%;
-
         display: inline-block;
-
         margin-left: 30%;
-
         text-align: right;
+        width: 70%;
 
         h4 {
             margin: 0.6rem 0;
             text-align: center;
         }
+
+        @media screen and (min-width: $laptop-w-min) {
+            margin-top: -1rem;
+
+            h4 {
+                font-size: 2rem;
+                line-height: 2;
+                margin-right: 7rem;
+                text-align: right;
+            }
+        }
     }
 
     .personal-info {
-        width: 50%;
-
         display: inline-block;
-
         margin-left: 1rem;
-
+        margin-top: 2rem;        
         text-align: left;
-        margin-top: 2rem;
+        width: 50%;
 
         h4 {
             margin: 0.6rem 0;
         }
+
+        @media screen and (min-width: $laptop-w-min) {
+            width: 40%;
+
+            h4 {
+                font-size: 2rem;
+                line-height: 2;
+                margin-left: 7rem;
+                text-align: left;
+            }
+        }
     }
 
     .logo {
+        
+        display: inline-block;
+        margin-top: 1.5rem;
+        position: absolute;
         width: 6rem;
 
-        display: inline-block;
-
-        margin-top: 1.5rem;
-
-        position: absolute;
+        @media screen and (min-width: $laptop-w-min) {
+            margin-top: 2.5rem;
+            width: 16rem;
+        }
     }
 
     .links {
-        margin-top: 2rem;
-
-        display: flex;
-
+        display: flex;        
         flex-wrap: wrap;
-
+        margin-left: 2rem;
+        margin-top: 2rem;
         width: 60%;
 
-        margin-left: 2rem;
-
         .hover {
-            position: absolute;
-
-            width: 2rem;
-
             height: 2rem;
-
+            position: absolute;
             margin-left: -1rem;
-
-            z-index: -1;
-
             margin-top: -1.8rem;
+            width: 2rem;
+            z-index: -1;
         }
 
         li {
             padding: 1rem 0;
         }
+
+        @media screen and (min-width: $laptop-w-min) {
+            font-size: 1.4rem;
+            justify-content: space-evenly;
+            margin-left: 0;
+            margin-top: 10rem;
+            width: 100%;
+
+            .hover {                
+                height: 3rem;
+                margin-left: -1.4rem;
+                margin-top: -2.6rem;
+                width: 3rem;
+            }
+        }        
     }
 
     footer {
-        font-weight: 700;
-        margin-top: 1.25rem;
         text-align: center;
-
+        margin-top: 1.25rem;
         font-size: 1.25rem;
+        font-weight: 700;
+
+        span.wrap {
+            display: block;
+        }
+
+        @media screen and (min-width: $laptop-w-min) {
+            font-size: 1.8rem;  
+            margin-top: 4rem;      
+        }
     }
 
 }
@@ -275,7 +340,7 @@ main {
 
 div.bg {
     position: absolute;
-    height: 100%;
+    height: auto;
     left: 0;
     overflow: hidden;
     top: 0;
@@ -285,22 +350,41 @@ div.bg {
     .yellow-box {
         height: 10rem;
         width: 57vw;
+
+        @media screen and (min-width: $laptop-w-min) {
+            height: 23rem;
+            width: 55vw;
+        }
     }
+
     .green-box {
         height: 8rem;
-        width: 69vw; 
-        transform: translate(0,-2rem);
         margin-left: 31vw;
+        margin-top: -2rem;
+        width: 69vw; 
 
+        @media screen and (min-width: $laptop-w-min) {
+            height: 13rem;
+            margin-left: 42vw;
+            margin-top: -4rem;
+            width: 58vw;
+        }
     }
+
     .violet-box {
         height: 5.5rem;
-        transform: translate(0, -3rem);
+        margin-top: -1rem;
         width: 95vw;
+
+        @media screen and (min-width: $laptop-w-min) {
+            height: 12.5rem;
+            margin-top: -2rem;
+            width: 65vw;
+        }
     }
 
     .hr-grp {
-        transform: translate(0,-2.8rem);
+        margin-top: 1rem;
 
         hr {
             border-width: 0.05rem;
@@ -315,22 +399,74 @@ div.bg {
         hr:nth-child(3){
             transform: translate(20vw);
         }
+
+        @media screen and (min-width: $laptop-w-min) {
+            margin-top: 6rem;
+        }
     }
 
-    .blue-boxes.right {   
-        margin-left: 60vw;
-        transform: translate(0,-4.7rem);
+    .blue-boxes {
+        display: inline-block;
+        margin-top: -2rem;
+        
+        @media screen and (min-width: $laptop-w-min) {
+            margin-top: 6rem;
+        } 
         
         .box {
             height: 7rem;
             width: 40vw;
+
+            @media screen and (min-width: $laptop-w-min) {
+                height: 8rem;
+                width: 18vw;
+            }   
         }
+    }
+
+    .blue-boxes.right {   
+        margin-left: 66vw;
+
+        @media screen and (min-width: $laptop-w-min) {
+            margin-left: 0;
+            float: right;
+            transform: translate(9rem, 0);
+        }
+
         .box:nth-child(2){
             transform: translate(2rem, -5rem);
+
+            @media screen and (min-width: $laptop-w-min) {
+                transform: translate(-2rem, -5rem);                
+            }
         }
         .box:nth-child(3){
             transform: translate(4rem, -10rem);
+
+            @media screen and (min-width: $laptop-w-min) {
+                transform: translate(-4rem, -10rem);                
+            }
         }
+    }
+
+    .blue-boxes.left {
+        display: none;
+
+        @media screen and (min-width: $tablet-w-min) {
+            display: inline-block;
+        } 
+
+        @media screen and (min-width: $laptop-w-min) {
+
+            transform: translate(-9rem, 0);
+            
+            .box:nth-child(2){
+                transform: translate(2rem, -5rem);                
+            }
+            .box:nth-child(3){
+                transform: translate(4rem, -10rem);                
+            }
+        } 
     }
 }
 
@@ -346,6 +482,11 @@ a {
     color: $black;
 }
 
+hr {
+    border-color: $mid-grey;
+    color: $mid-grey;
+}
+
 .links li div {
     background: #fff300;
 
@@ -355,6 +496,10 @@ a {
 
 .links li:hover div, .links a:focus + div {
     transform: scaleX(5);
+
+    @media screen and (min-width: $laptop-w-min) {
+        transform: scaleX(4.5);        
+    }
 }
 
 // ------------------------------------------------

@@ -72,7 +72,6 @@ a {
 
 a:hover, a:focus {
     border-bottom: 1px $black solid;
-    opacity: 0.85;
 }
 
 
@@ -650,3 +649,112 @@ body {
 // ----------------------------------------------------------------------------
 // Animations
 // ----------------------------------------------------------------------------
+
+/* ----------------- SNARE ANIMATION ----------------- */
+
+div.snare {
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.0);
+    cursor: pointer;
+    transition: border-bottom 225ms ease-in-out;
+}
+
+div.snare:hover, div.snare:focus {
+    border-bottom: 1px $black solid;
+}
+
+div.snare.active {
+    border-color: $mid-grey;
+}
+
+div.snare g.sticks .shadowRight, div.snare g.sticks .shadowLeft{
+    opacity: 0;
+}
+
+div.snare g.sticks .stickRight {
+    transform: translate(6px,-20px);
+}
+
+div.snare g.sticks .stickLeft {
+    transform: translate(-2px,-13px);
+}
+
+
+.snareAnimationStickLeft {
+    animation: hitLeftStick 600ms;
+    animation-timing-function: ease-out;
+}
+
+.snareAnimationShadowLeft {
+    animation: showLeftShadow 600ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes hitLeftStick{
+    0% {
+        transform: translate(-2px,-13px);        
+    }
+    50% {
+        transform: translate(0px,10px);
+    }
+    100% {
+        transform: translate(-2px,-13px);        
+    }
+}
+
+@keyframes showLeftShadow {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.snareAnimationStickRight {
+    animation: hitRightStick 600ms;
+    animation-timing-function: ease-out;
+}
+
+.snareAnimationShadowRight {
+    animation: showRightShadow 600ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes hitRightStick{
+    0% {
+        transform: translate(6px,-20px);
+    }
+    50% {
+        transform: translate(0); 
+    }
+    100% {
+        transform: translate(6px,-20px);    
+    }
+}
+
+@keyframes showRightShadow {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

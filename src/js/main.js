@@ -29,8 +29,6 @@ const snareShadowRight = document.querySelector('div.snare g.sticks path.shadowR
 
 // ----------------- SNARE ONCLICK -----------------
 
-
-
 snare.addEventListener('click', (e)=>{
     
     let n = getRandomSample();    
@@ -73,3 +71,33 @@ snare.addEventListener('click', (e)=>{
 
 });
 
+// ----------------- BOX ANIMATIONS -----------------
+
+const boxes = document.querySelectorAll('div.bg > .box');
+
+setTimeout( ()=>{
+    for(const box of boxes){
+        box.classList.add('loop');
+    }
+},1000);
+
+// ----------------- PAUSE ALL ANIMATIONS -----------------
+
+const toggle = document.querySelector(`.toggle input[type='checkbox']`);
+
+toggle.addEventListener('change', (e)=>{
+
+    if (e.target.checked) {
+
+        for(const box of boxes){
+            box.style.animationPlayState= 'running';
+        }
+
+    } else {
+
+        for(const box of boxes){
+            box.style.animationPlayState= 'paused';
+        }
+
+    }
+})

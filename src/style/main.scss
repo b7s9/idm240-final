@@ -650,7 +650,7 @@ body {
 // Animations
 // ----------------------------------------------------------------------------
 
-/* ----------------- SNARE ANIMATION ----------------- */
+// ----------------- SNARE ANIMATION ----------------- 
 
 div.snare {
     border-bottom: 1px solid rgba($color: #000000, $alpha: 0.0);
@@ -756,5 +756,95 @@ div.snare g.sticks .stickLeft {
     }
     100% {
         opacity: 0;
+    }
+}
+
+
+// ----------------- BOX ANIMATIONS ----------------- 
+
+.yellow-box {
+    animation: enterYellowBox 1s ease-out 1 forwards;
+
+}
+
+.yellow-box.loop {
+    animation: loopYellowBox 16s ease-in-out alternate infinite;
+    animation-delay: -8s;
+}
+
+@keyframes loopYellowBox {
+    0%{
+        opacity: 0.55;
+    }
+    100%{
+        opacity: 0.45;
+    }
+}
+
+@keyframes enterYellowBox {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+// ---------
+
+.green-box {
+    animation: enterGreenBox 1s ease-out 1 forwards;
+}
+
+.green-box.loop {
+    animation: loopGreenBox 6s ease-in-out alternate infinite;
+    animation-delay: -5s;
+}
+
+@keyframes loopGreenBox {
+    0% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(1rem);
+    }
+}
+
+@keyframes enterGreenBox {
+    0% {
+        transform: translateY(-35rem);        
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+// --------
+
+.violet-box {
+    animation: enterVioletBox 1s ease-out 1 forwards;
+    transform-origin: 0 50%;
+}
+
+.violet-box.loop {
+    animation: loopVioletBox 10s ease-in-out alternate infinite;
+    animation-delay: -5s;
+}
+
+@keyframes loopVioletBox {
+    0%{
+        transform: scaleX(0.9);
+    }
+    100% {
+        transform: scaleX(1.1);
+    }
+}
+
+@keyframes enterVioletBox {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);        
     }
 }

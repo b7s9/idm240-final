@@ -489,6 +489,10 @@ div.bg {
     .blue-boxes {
         display: inline-block;
         margin-top: -2rem;
+        position: relative;
+        height: 19rem;
+        width: 18vw;
+
 
         @media screen and (min-width: $tablet-w-min) {
             margin-top: 6rem;
@@ -501,6 +505,7 @@ div.bg {
         .box {
             height: 7rem;
             width: 40vw;
+            position: absolute;
 
             @media screen and (min-width: $tablet-w-min) {
                 height: 8rem;
@@ -530,26 +535,26 @@ div.bg {
         }
 
         .box:nth-child(2){
-            transform: translate(2rem, -5rem);
+            transform: translate(2rem, 2rem);
 
             @media screen and (min-width: $tablet-w-min) {
-                transform: translate(-2rem, -5rem);                
+                transform: translate(-2rem, 3rem);             
             }
 
-            @media screen and (min-width: $laptop-w-min) {
-                transform: translate(-2rem, -5rem);                
-            }
+            // @media screen and (min-width: $laptop-w-min) {
+            //     transform: translate(-2rem, -5rem);                
+            // }
         }
         .box:nth-child(3){
-            transform: translate(4rem, -10rem);
+            transform: translate(4rem, 4rem);
 
             @media screen and (min-width: $tablet-w-min) {
-                transform: translate(-4rem, -10rem);                
+                transform: translate(-4rem, 6rem);           
             }
 
-            @media screen and (min-width: $laptop-w-min) {
-                transform: translate(-4rem, -10rem);                
-            }
+            // @media screen and (min-width: $laptop-w-min) {
+            //     transform: translate(-4rem, -10rem);                
+            // }
         }
     }
 
@@ -565,10 +570,10 @@ div.bg {
             transform: translate(-4rem, 0);
             
             .box:nth-child(2){
-                transform: translate(2rem, -5rem);                
+                transform: translate(2rem, 3rem);                
             }
             .box:nth-child(3){
-                transform: translate(4rem, -10rem);                
+                transform: translate(4rem, 6rem);                
             }
         } 
 
@@ -577,10 +582,10 @@ div.bg {
             transform: translate(-9rem, 0);
             
             .box:nth-child(2){
-                transform: translate(2rem, -5rem);                
+                transform: translate(2rem, 3rem);               
             }
             .box:nth-child(3){
-                transform: translate(4rem, -10rem);                
+                transform: translate(4rem, 6rem);                
             }
         } 
     }

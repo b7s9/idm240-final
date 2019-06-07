@@ -60,12 +60,16 @@ snare.addEventListener('click', (e)=>{
             snareShadowRight.classList.remove('snareAnimationShadowRight');
         },1000);
 
+        //animation done event handler
+
         AnimationIsLeftStick = true;
     }
 
     setTimeout( ()=>{
         snare.classList.remove('active');
     },1000);
+
+    // audio.on.playend event handler
 
     lastSample = n;
 

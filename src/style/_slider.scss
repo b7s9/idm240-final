@@ -43,7 +43,7 @@
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #19b647;
+    box-shadow: 2px 1px 4px rgb(151, 83, 151);
   }
   
   input:checked + .slider:before {
